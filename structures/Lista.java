@@ -1,14 +1,8 @@
 package structures;
 
-/**
- * Clase Lista - Lista doblemente enlazada genérica.
- * Permite gestionar una colección de elementos mediante nodos enlazados.
- * Cada nodo apunta al siguiente y al anterior, lo que permite recorrido
- * en ambas direcciones.
- */
 public class Lista {
-    private Nodo cabeza;   // Primer nodo de la lista
-    private Nodo cola;     // Último nodo de la lista
+    private Nodo cabeza;
+    private Nodo cola;
     private int tamanio;
 
     public Lista() {
@@ -17,9 +11,6 @@ public class Lista {
         this.tamanio = 0;
     }
 
-    /**
-     * Agrega un elemento al final de la lista.
-     */
     public void agregar(Object dato) {
         Nodo nuevo = new Nodo(dato);
         if (cabeza == null) {
@@ -33,9 +24,6 @@ public class Lista {
         tamanio++;
     }
 
-    /**
-     * Agrega un elemento al inicio de la lista.
-     */
     public void agregarAlInicio(Object dato) {
         Nodo nuevo = new Nodo(dato);
         if (cabeza == null) {
@@ -49,9 +37,6 @@ public class Lista {
         tamanio++;
     }
 
-    /**
-     * Agrega un elemento en una posición específica (base 0).
-     */
     public void agregarEnPosicion(int indice, Object dato) {
         if (indice < 0 || indice > tamanio) {
             throw new IndexOutOfBoundsException("Índice fuera de rango: " + indice);
@@ -79,9 +64,6 @@ public class Lista {
         tamanio++;
     }
 
-    /**
-     * Elimina y retorna el primer elemento de la lista.
-     */
     public Object eliminarPrimero() {
         if (cabeza == null) {
             throw new RuntimeException("La lista está vacía.");
@@ -97,9 +79,6 @@ public class Lista {
         return dato;
     }
 
-    /**
-     * Elimina y retorna el último elemento de la lista.
-     */
     public Object eliminarUltimo() {
         if (cola == null) {
             throw new RuntimeException("La lista está vacía.");
@@ -115,9 +94,6 @@ public class Lista {
         return dato;
     }
 
-    /**
-     * Elimina el elemento en la posición indicada (base 0).
-     */
     public Object eliminarEnPosicion(int indice) {
         if (indice < 0 || indice >= tamanio) {
             throw new IndexOutOfBoundsException("Índice fuera de rango: " + indice);
@@ -136,9 +112,6 @@ public class Lista {
         return dato;
     }
 
-    /**
-     * Retorna el dato en la posición indicada (base 0).
-     */
     public Object buscarDato(int indice) {
         if (indice < 0 || indice >= tamanio) {
             throw new IndexOutOfBoundsException("Índice fuera de rango: " + indice);
@@ -150,10 +123,6 @@ public class Lista {
         return actual.getDato();
     }
 
-    /**
-     * Busca un objeto en la lista por igualdad (equals).
-     * Retorna el dato si lo encuentra, null si no.
-     */
     public Object buscarDato(Object dato) {
         Nodo actual = cabeza;
         while (actual != null) {
@@ -165,32 +134,20 @@ public class Lista {
         return null;
     }
 
-    /**
-     * Verifica si la lista contiene el objeto dado.
-     */
     public boolean contiene(Object dato) {
         return buscarDato(dato) != null;
     }
 
-    /**
-     * Retorna la cantidad de elementos en la lista.
-     */
     public int cuentaElementos() {
         return tamanio;
     }
 
-    /**
-     * Limpia completamente la lista.
-     */
     public void limpiar() {
         cabeza = null;
         cola = null;
         tamanio = 0;
     }
 
-    /**
-     * Muestra los elementos de adelante hacia atrás (inicio → fin).
-     */
     public void mostrarAdelante() {
         if (cabeza == null) {
             System.out.println("  [Lista vacía]");
@@ -205,9 +162,6 @@ public class Lista {
         }
     }
 
-    /**
-     * Muestra los elementos de atrás hacia adelante (fin → inicio).
-     */
     public void mostrarAtras() {
         if (cola == null) {
             System.out.println("  [Lista vacía]");

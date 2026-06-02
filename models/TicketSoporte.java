@@ -1,17 +1,12 @@
 package models;
 
-/**
- * Clase TicketSoporte - Entidad principal del caso 6: Mesa de ayuda TI.
- * Representa un ticket de soporte técnico generado por un usuario.
- * Contiene información relevante para su gestión y seguimiento.
- */
 public class TicketSoporte {
 
-    private String codigoTicket;      // Identificador único del ticket (TKT-XXXX)
-    private String nombreUsuario;     // Nombre del usuario que reporta el problema
-    private String descripcionFalla;  // Descripción del problema técnico
-    private String prioridad;         // Alta / Media / Baja
-    private String estado;            // PENDIENTE / PROCESADO / CANCELADO
+    private String codigoTicket;
+    private String nombreUsuario;
+    private String descripcionFalla;
+    private String prioridad;
+    private String estado;
 
     public TicketSoporte(String codigoTicket, String nombreUsuario,
                          String descripcionFalla, String prioridad) {
@@ -36,8 +31,6 @@ public class TicketSoporte {
         this.estado = "PENDIENTE";
     }
 
-    // ── Getters ────────────────────────────────────────────────────────────────
-
     public String getCodigoTicket() {
         return codigoTicket;
     }
@@ -57,8 +50,6 @@ public class TicketSoporte {
     public String getEstado() {
         return estado;
     }
-
-    // ── Setters ────────────────────────────────────────────────────────────────
 
     public void setCodigoTicket(String codigoTicket) {
         this.codigoTicket = codigoTicket.toUpperCase().trim();
@@ -80,8 +71,6 @@ public class TicketSoporte {
         this.estado = estado;
     }
 
-    // ── Métodos de representación ──────────────────────────────────────────────
-
     @Override
     public String toString() {
         return "Ticket[" + codigoTicket + "] " +
@@ -91,9 +80,6 @@ public class TicketSoporte {
                " | Estado: " + estado;
     }
 
-    /**
-     * Dos tickets son iguales si tienen el mismo código (identificador principal).
-     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;

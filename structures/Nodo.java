@@ -1,9 +1,5 @@
 package structures;
 
-/**
- * Clase Nodo - Nodo doblemente enlazado genérico.
- * Almacena un dato y referencias al nodo anterior y siguiente.
- */
 public class Nodo {
     private Object dato;
     private Nodo siguiente;
