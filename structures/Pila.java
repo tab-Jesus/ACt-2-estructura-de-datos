@@ -12,7 +12,7 @@ public class Pila {
         Nodo nuevo = new Nodo(dato);
         nuevo.setSiguiente(tope);
         tope = nuevo;
-        tamanio++;
+         tamanio++;
     }
 
     public Object desapilar() {

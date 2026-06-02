@@ -12,7 +12,7 @@ public class Nodo {
     }
 
     public Object getDato() {
-        return dato;
+         return dato;
     }
 
     public void setDato(Object dato) {

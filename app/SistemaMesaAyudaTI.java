@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class SistemaMesaAyudaTI {
 
-    private static Lista  listaGeneral      = new Lista();
+    private static Lista  listaGeneral     = new Lista();
     private static Cola   colaPendientes    = new Cola();
     private static Pila   historialProcesados = new Pila();
     private static Scanner scanner = new Scanner(System.in);

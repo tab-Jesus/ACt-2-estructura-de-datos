@@ -20,7 +20,7 @@ public class Lista {
             nuevo.setAnterior(cola);
             cola.setSiguiente(nuevo);
             cola = nuevo;
-        }
+        } 
         tamanio++;
     }
 
